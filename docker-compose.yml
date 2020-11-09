@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  prodasmwf21-1-appserver:
+    image: mkoellges/wildfly:21.0
+    ports:
+      - 0.0.0.0:8080:8080
+      - 0.0.0.0:9990:9990
+    hostname: wildfly
+    container_name: wildfly
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    environment:
+      - JVM_PARAM=-Xms1024m -Xmx1024m
+      - CONFIG_TYPE=standalone-ha
+      - JBOSS_PWD=manager1

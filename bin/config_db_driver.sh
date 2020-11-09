@@ -1,0 +1,18 @@
+    # Oracle rdbms driver
+    sed -i "s/<\/drivers>/    <driver name=\"oracle\" module=\"com.oracle\">\n                        <driver-class>oracle.jdbc.driver.OracleDriver<\/driver-class>\n                    <\/driver>\n                <\/drivers>/" /opt/jboss/standalone/configuration/standalone.xml
+    sed -i "s/<\/drivers>/    <driver name=\"oracle\" module=\"com.oracle\">\n                        <driver-class>oracle.jdbc.driver.OracleDriver<\/driver-class>\n                    <\/driver>\n                <\/drivers>/" /opt/jboss/standalone/configuration/standalone-ha.xml
+    sed -i "s/<\/drivers>/    <driver name=\"oracle\" module=\"com.oracle\">\n                        <driver-class>oracle.jdbc.driver.OracleDriver<\/driver-class>\n                    <\/driver>\n                <\/drivers>/" /opt/jboss/standalone/configuration/standalone-full.xml
+    sed -i "s/<\/drivers>/    <driver name=\"oracle\" module=\"com.oracle\">\n                        <driver-class>oracle.jdbc.driver.OracleDriver<\/driver-class>\n                    <\/driver>\n                <\/drivers>/" /opt/jboss/standalone/configuration/standalone-full-ha.xml
+
+    # MySql rdbms driver
+    sed -i "s/<\/drivers>/    <driver name=\"mysql\" module=\"com.mysql\">\n                        <driver-class>com.mysql.cj.jdbc.Driver<\/driver-class>\n                    <\/driver>\n                <\/drivers>/" /opt/jboss/standalone/configuration/standalone.xml
+    sed -i "s/<\/drivers>/    <driver name=\"mysql\" module=\"com.mysql\">\n                        <driver-class>com.mysql.cj.jdbc.Driver<\/driver-class>\n                    <\/driver>\n                <\/drivers>/" /opt/jboss/standalone/configuration/standalone-ha.xml
+    sed -i "s/<\/drivers>/    <driver name=\"mysql\" module=\"com.mysql\">\n                        <driver-class>com.mysql.cj.jdbc.Driver<\/driver-class>\n                    <\/driver>\n                <\/drivers>/" /opt/jboss/standalone/configuration/standalone-full.xml
+    sed -i "s/<\/drivers>/    <driver name=\"mysql\" module=\"com.mysql\">\n                        <driver-class>com.mysql.cj.jdbc.Driver<\/driver-class>\n                    <\/driver>\n                <\/drivers>/" /opt/jboss/standalone/configuration/standalone-full-ha.xml
+
+    # Postges rdbms driver
+    sed -i "s/<\/drivers>/    <driver name=\"postgresql\" module=\"com.postgresql\">\n                        <xa-datasource-class>org.postgresql.xa.PGXADataSource<\/xa-datasource-class>\n                    <\/driver>\n                <\/drivers>/" /opt/jboss/standalone/configuration/standalone.xml
+    sed -i "s/<\/drivers>/    <driver name=\"postgresql\" module=\"com.postgresql\">\n                        <xa-datasource-class>org.postgresql.xa.PGXADataSource<\/xa-datasource-class>\n                    <\/driver>\n                <\/drivers>/" /opt/jboss/standalone/configuration/standalone-ha.xml
+    sed -i "s/<\/drivers>/    <driver name=\"postgresql\" module=\"com.postgresql\">\n                        <xa-datasource-class>org.postgresql.xa.PGXADataSource<\/xa-datasource-class>\n                    <\/driver>\n                <\/drivers>/" /opt/jboss/standalone/configuration/standalone-full.xml
+    sed -i "s/<\/drivers>/    <driver name=\"postgresql\" module=\"com.postgresql\">\n                        <xa-datasource-class>org.postgresql.xa.PGXADataSource<\/xa-datasource-class>\n                    <\/driver>\n                <\/drivers>/" /opt/jboss/standalone/configuration/standalone-full-ha.xml
+    
