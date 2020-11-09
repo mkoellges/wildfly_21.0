@@ -38,6 +38,3 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         repository: mkoellges/wildfly:21.0
         tag_with_ref: true
-      
-
-  
