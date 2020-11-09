@@ -15,4 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag wildfly:21
+      run: docker build . --file Dockerfile --tag mkoellges/wildfly:21.0
+    - name: Run the image
+      run: docker-compose up -d && sleep 30
+    - name: test the image
+      run: curl http://localhost:8080/check.html
