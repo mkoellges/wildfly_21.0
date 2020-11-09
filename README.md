@@ -283,7 +283,7 @@ version: '3'
 services:
 
   appserver:
-    image: registry.metroscales.io/[YOURPROJECTNAME]/[YOURIMAGENAME]:[YOUR_VERSION_TAG]
+    image: mkoellges/[YOURPROJECTNAME]/[YOURIMAGENAME]:[YOUR_VERSION_TAG]
     ports:
       - 0.0.0.0:8080:8080
       - 0.0.0.0:9990:9990
@@ -313,11 +313,11 @@ The Admin console WebUI can be accessed using the URL http://[HOSTNAME]:9990/
 When you started your container, you can change settings inside of it using the WebUI or connecting to it via "docker exec -it". Test you changes in your running container and if everything works as expected, you can create a new image of it with the command
 
 ```sh
-docker commit -a [MAINTAINER] [CONTAINERID] registry.metroscales.io/[PROJECTNAME]/[REPOSITORY]:[TAG]
+docker commit -a [MAINTAINER] [CONTAINERID] mkoellges/[PROJECTNAME]/[REPOSITORY]:[TAG]
 
 # example of it
 
-docker commit -a mannis.test@metronom.com db9820233935 registry.metroscales.io/asm/apptest-mk-test-1:1.0
+docker commit -a mannis.test@metronom.com db9820233935 mkoellges/apptest-mk-test-1:1.0
 ```
 
 Now you have persisted your changes in a new container and you can push this image into the Docker registry to be used on different nodes.
